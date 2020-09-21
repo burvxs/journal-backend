@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  grand_total: 1
+  weekly_total: 1
+  daily_total: 1
+  incomplete_total: 1
+  incomplete_daily_total: 1
+  incomplete_weekly_total: 1
+
+two:
+  user_id: 1
+  grand_total: 1
+  weekly_total: 1
+  daily_total: 1
+  incomplete_total: 1
+  incomplete_daily_total: 1
+  incomplete_weekly_total: 1

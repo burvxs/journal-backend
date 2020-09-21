@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  task_id: 1
+  user_id: 1
+  category_id: 1
+  sublist_id: 1
+  future_proof: 
+  task: MyText
+  priority_level: 1
+  solidifier: MyString
+  completed: false
+  global: false
+
+two:
+  task_id: 1
+  user_id: 1
+  category_id: 1
+  sublist_id: 1
+  future_proof: 
+  task: MyText
+  priority_level: 1
+  solidifier: MyString
+  completed: false
+  global: false

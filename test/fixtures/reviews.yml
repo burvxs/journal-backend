@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  review_id: 1
+  user_id: 1
+  weekly_review: MyText
+  daily_review: MyText
+  future_proof_review: MyText
+  future_proofer_id: 1
+
+two:
+  review_id: 1
+  user_id: 1
+  weekly_review: MyText
+  daily_review: MyText
+  future_proof_review: MyText
+  future_proofer_id: 1

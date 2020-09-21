@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  email: MyText
+  name: MyText
+  password: MyText
+  prioritising: false
+  daily_review: false
+
+two:
+  user_id: 1
+  email: MyText
+  name: MyText
+  password: MyText
+  prioritising: false
+  daily_review: false
