@@ -33,3 +33,5 @@ module JournalApi
     config.api_only = true
   end
 end
+
+

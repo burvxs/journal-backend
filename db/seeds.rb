@@ -31,20 +31,30 @@ t1 = Task.create!(
     user_id: u1.id,
     task: "Clean up room",
     solidifier: "Mental clarity",
-    completed: false,
-    global: false
+    completed: true,
+    global: false,
+    priority_level: 10
 )
-
+t10 = Task.create!(
+    user_id: u2.id,
+    task: "Beat Randy Savage",
+    solidifier: "Title Ship",
+    completed: false,
+    global: false,
+    priority_level: 10
+)
 t2 = Task.create!(
     user_id: u1.id,
     task: "Finish final project",
     solidifier: "For learning & employment",
     completed: false,
-    global: false
+    global: false,
+    priority_level: 100
 )
 
 c1 = Category.create!(
-    title: "Fitness"
+    title: "Fitness",
+    user_id: u1.id
 )
 
 subl1 = SubList.create!(
