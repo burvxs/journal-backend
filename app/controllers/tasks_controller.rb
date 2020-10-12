@@ -37,8 +37,45 @@ class TasksController < ApplicationController
   end
 
   def update
-    is_complete_boolean = JSON.parse(params[:is_complete])
-    Task.find(params[:id]).update(completed: is_complete_boolean)
+    task_to_update = Task.find(params[:id])
+    puts "PATCHED PARAMS #{params}"
+    is_complete_params = params[:is_complete]
+    task_params = params[:task]
+    solidifier_params = params[:solidifier]
+    priority_params = params[:priority]
+    unless params[:is_complete].is_a?(String)
+      is_complete_params = task_to_update.completed?
+    else
+      is_complete_params = JSON(params[:is_complete])
+    end
+    unless params[:task].is_a?(String)
+      task_params = task_to_update.task
+    end
+    unless params[:solidifier].is_a?(String)
+      solidifier_params = task_to_update.solidifier
+    end
+    unless params[:priority].is_a?(String)
+      priority_params = task_to_update.priority_level
+    end
+
+    task_to_update.update(task: task_params, solidifier: solidifier_params, :priority_level => priority_params, completed: is_complete_params)
+    # if params[:is_complete].present?
+    #   is_complete_boolean = JSON.parse(params[:is_complete])
+    #   task_to_update.update(completed: is_complete_boolean)
+    # elsif params[:task] != nil
+    #   task_to_update.update(task: params[:task])
+    #   render :json => {
+    #     task: task_to_update.task
+    #   } 
+    # elsif params[:solidifier].present?
+    #   task_to_update.update(solidifier: params[:solidifier])
+
+    #   render :json => {
+    #     solidifier: task_to_update.solidifier
+    #   } 
+    # end
+
+    render json: task_to_update
   end
 
   private
